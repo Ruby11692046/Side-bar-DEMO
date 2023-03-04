@@ -1,6 +1,6 @@
 function setTime() {
     const now = new Date();
-    const hours = now.getHours() - 3.25;
+    const hours = now.getHours() - 3;
     const minutes = now.getMinutes() - 15;
     const seconds = now.getSeconds() - 15;
     const hourDegrees = (hours / 12) * 360 + (minutes / 60) * 30;
