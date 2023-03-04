@@ -76,7 +76,7 @@ function checkCollision() {
 
 function update() {
     //落下物の生成
-    if (Math.random() < 0.25) {
+    if (Math.random() < 0.1) {
         createFallingObject();
     }
 
@@ -85,7 +85,7 @@ function update() {
     for (let i = 0; i < fallingObjects.length; i++) {
         const object = fallingObjects[i];
         const objectTop = parseInt(object.style.top) || 0;
-        object.style.top = objectTop + 5 + 'px';
+        object.style.top = objectTop + 2 + 'px';
         if (objectTop > 600) {
             object.parentNode.removeChild(object);
         }
@@ -136,7 +136,7 @@ shobonn.style.top = '200px';
 //～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
 let jumping = false; // ジャンプ中かどうかを示すフラグ
 const jumpPower = 12; // ジャンプの強さ
-const gravity = 0.5; // 重力の強さ
+const gravity = 0.14; // 重力の強さ
 let velocity = { x: 0, y: 0 }; // キャラクターの速度
 
 //ジャンプの定義
@@ -151,10 +151,10 @@ function jump() {
 document.addEventListener('keydown', function (event) {
     switch (event.keyCode) {
         case 65: // Aキー
-            velocity.x = -5;
+            velocity.x = -3;
             break;
         case 68: // Dキー
-            velocity.x = 5;
+            velocity.x = 3;
             break;
         case 32: // スペースキー
             jump();
