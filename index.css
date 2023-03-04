@@ -108,7 +108,7 @@ body::-webkit-scrollbar {
     transition: all 0.2s ease-in-out;
 }
 
-#clock {
+#clockmenu {
     color: white;
     font-size: 100%;
 }
@@ -152,6 +152,15 @@ body::-webkit-scrollbar {
     outline: none;
 }
 
+#shobonn {
+    position: relative;
+    left: 0;
+    top: 0;
+    color: white;
+    width: 90px;
+    outline: none;
+}
+
 #gameArea {
     width: 1260px;
     height: 600px;
@@ -176,4 +185,76 @@ body::-webkit-scrollbar {
 @font-face {
     font-family: "PressStart2P";
     src: url("src/PressStart2P-Regular.ttf") format("truetype");
+}
+
+#clock {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#hour-hand {
+    width: 50px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(0deg);
+}
+
+#minute-hand {
+    width: 75px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(0deg);
+}
+
+#second-hand {
+    width: 100px;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(0deg);
+}
+
+.hour {
+    position: absolute;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.hour-3 {
+    top: 91.6px;
+    left: 183.2px;
+}
+
+.hour-6 {
+    top: 183.2px;
+    left: 86.6px;
+}
+
+.hour-9 {
+    top: 91.6px;
+    left: 0px;
+}
+
+.hour-12 {
+    top: 0px;
+    left: 86.6px;
 }

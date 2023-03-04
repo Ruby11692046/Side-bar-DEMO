@@ -18,6 +18,11 @@ function changeSrc4() {
     iframe.src = "clock.html";
 }
 
+function changeSrc5() {
+    var iframe = document.getElementById("my-iframe");
+    iframe.src = "all.html";
+}
+
 function rocket() {
     var rocket = document.getElementById("rocket");
     rocket.style.position = 'relative';
@@ -53,7 +58,7 @@ function updateClock() {
     hour = ('0' + hour).slice(-2);
     minute = ('0' + minute).slice(-2);
     let time = hour + ':' + minute;
-    document.getElementById('clock').textContent = time;
+    document.getElementById('clockmenu').textContent = time;
     setTimeout(updateClock, 1000);
 }
 updateClock();
