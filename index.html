@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubyのデモサイト</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body style="margin: 0%;">
+    <div class="full">
+        <div class="menu">
+            <div>
+                <p onclick="changeSrc()" target="_blank" class="menuB">トップ</p>
+            </div>
+            <div>
+                <p onclick="changeSrc3()" target="_blank" class="menuB">何のサイト？</p>
+            </div>
+            <div>
+                <p onclick="changeSrc2()" target="_blank" class="menuB">動く！しょぼん</p>
+            </div>
+            <div>
+                <p onclick="rocket()" class="menuB" id="rocket">（ ^ω^ ）</p>
+            </div>
+            <div onclick="changeSrc4()" class="menuB" id="clock"></div>
+        </div>
+        <iframe id="my-iframe" src="top.html" frameborder="0" class="contents"></iframe>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

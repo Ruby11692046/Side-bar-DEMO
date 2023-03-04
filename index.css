@@ -1,0 +1,179 @@
+#starback {
+    background-color: #000;
+    background-size: 3px 3px;
+    color: white;
+}
+
+@keyframes star {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 10000px;
+    }
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 1px white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.full {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.menu {
+    width: 10%;
+    background-color: black;
+    border: 5px solid #ffffff;
+    border-radius: 15px;
+    animation: neon-border-colors 20s infinite;
+}
+
+@keyframes neon-border-colors {
+    0% {
+        border-color: #ff00ff;
+        /* ネオンカラー1 */
+    }
+
+    15% {
+        border-color: #00ffff;
+        /* ネオンカラー2 */
+    }
+
+    30% {
+        border-color: #ffff00;
+        /* ネオンカラー3 */
+    }
+
+    45% {
+        border-Color: #00ff00;
+        /* ネオンカラー4 */
+    }
+
+    60% {
+        border-Color: #ff0000;
+        /* ネオンカラー5 */
+    }
+
+    75% {
+        border-Color: #FFA500;
+        /* ネオンカラー5 */
+    }
+
+    90% {
+        border-Color: #ffffff;
+        /* ネオンカラー7 */
+    }
+
+    100% {
+        border-color: #ff00ff;
+        /* ネオンカラー1 */
+    }
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.menuB {
+    margin-left: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    font-size: 2.5vh;
+}
+
+#rocket {
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#clock {
+    color: white;
+    font-size: 100%;
+}
+
+#roop {
+    text-align: center;
+    color: orange;
+}
+
+.frame {
+    margin: 40px;
+}
+
+#BUUUN {
+    position: relative;
+    animation: sway 10s ease-in-out infinite;
+    left: 0;
+    top: 0;
+}
+
+@keyframes sway {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 1000px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+#shobon {
+    position: relative;
+    left: 0;
+    top: 0;
+    color: white;
+    width: 80px;
+    outline: none;
+}
+
+#gameArea {
+    width: 1260px;
+    height: 600px;
+    position: relative;
+}
+
+.fallingObject {
+    position: absolute;
+    width: 5px;
+    height: 8px;
+    background-color: rgb(0, 0, 255);
+}
+
+.ground {
+    height: 30px;
+    width: 100%;
+    background: linear-gradient(0deg, #BDBDBD 20%, #9E9E9E 20%, #9E9E9E 40%, #BDBDBD 40%, #BDBDBD 60%, #9E9E9E 60%, #9E9E9E 80%, #BDBDBD 80%);
+    position: relative;
+    top: 12px;
+}
+
+@font-face {
+    font-family: "PressStart2P";
+    src: url("src/PressStart2P-Regular.ttf") format("truetype");
+}
